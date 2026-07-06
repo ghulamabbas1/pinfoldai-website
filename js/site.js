@@ -80,43 +80,19 @@
     applyTheme(getTheme());
   }
 
-  function ensureHeaderControls() {
-    var inner = document.querySelector('.site-header .inner');
-    if (!inner || document.getElementById('header-controls')) return;
+  function wireHeaderControls() {
+    var langSelect = document.getElementById('lang-select');
+    var themeToggle = document.getElementById('theme-toggle');
+    if (!langSelect || !themeToggle) return;
+    if (langSelect.dataset.wired === '1') return;
+    langSelect.dataset.wired = '1';
+    themeToggle.dataset.wired = '1';
 
-    var actions = document.createElement('div');
-    actions.className = 'header-actions';
-
-    var controls = document.createElement('div');
-    controls.id = 'header-controls';
-    controls.className = 'header-controls';
-    controls.innerHTML =
-      '<label class="visually-hidden" for="lang-select" data-i18n="lang.label">Language</label>' +
-      '<select id="lang-select" class="control-select" aria-label="Language">' +
-      '<option value="en">English</option>' +
-      '<option value="fr">Français</option>' +
-      '<option value="zh">中文</option>' +
-      '<option value="ar">العربية</option>' +
-      '</select>' +
-      '<button id="theme-toggle" type="button" class="theme-toggle" aria-label="Switch theme">' +
-      '<span class="icon-sun" aria-hidden="true">☀</span>' +
-      '<span class="icon-moon" aria-hidden="true">☾</span>' +
-      '</button>';
-
-    actions.appendChild(controls);
-
-    var toggle = inner.querySelector('.nav-toggle');
-    if (toggle) {
-      inner.insertBefore(actions, toggle);
-    } else {
-      inner.appendChild(actions);
-    }
-
-    document.getElementById('lang-select').addEventListener('change', function (e) {
+    langSelect.addEventListener('change', function (e) {
       applyI18n(e.target.value);
     });
 
-    document.getElementById('theme-toggle').addEventListener('click', function () {
+    themeToggle.addEventListener('click', function () {
       var next = getTheme() === 'dark' ? 'light' : 'dark';
       applyTheme(next);
     });
@@ -222,6 +198,6 @@
     });
   }
 
-  ensureHeaderControls();
+  wireHeaderControls();
   applyI18n(getLang());
 })();

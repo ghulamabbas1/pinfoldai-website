@@ -3,6 +3,7 @@ $ErrorActionPreference = "Stop"
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $contentDir = Join-Path $repoRoot "legal\content"
 $legalDir = Join-Path $repoRoot "legal"
+$headerControls = (Get-Content (Join-Path $repoRoot "partials\header-controls.html") -Raw).TrimEnd()
 
 $pages = @(
     @{ Slug = "eula"; Page = "eula"; Title = "End User License Agreement - Pinfold"; Desc = "EULA for the Pinfold AI mobile application." },
@@ -48,6 +49,7 @@ $header = @'
   <header class="site-header">
     <div class="container inner">
       <a class="logo" href="/"><span class="logo-mark">P</span><span>Pinfold</span></a>
+$HEADER_CONTROLS
       <nav class="nav-desktop">
         <a href="/" data-nav="/" data-i18n="nav.home">Home</a>
         <a href="/features.html" data-nav="/features.html" data-i18n="nav.features">Features</a>
@@ -106,8 +108,8 @@ $header = @'
   </footer>
   <script src="/js/i18n.js"></script>
   <script src="/js/i18n-legal.js"></script>
-  <script src="/js/i18n-legal-suite.js"></script>
-  <script src="/js/site.js"></script>
+  <script defer src="/js/i18n-legal-suite.js"></script>
+  <script defer src="/js/site.js"></script>
 </body>
 </html>
 '@
@@ -124,6 +126,7 @@ foreach ($p in $pages) {
     $html = $html.Replace('{SLUG}', $p.Slug)
     $html = $html.Replace('{PAGE}', $p.Page)
     $html = $html.Replace('{BODY}', $body.Trim())
+    $html = $html.Replace('$HEADER_CONTROLS', $headerControls)
     $outPath = Join-Path $legalDir "$($p.Slug).html"
     [System.IO.File]::WriteAllText($outPath, $html)
     Write-Host "Built $outPath"
