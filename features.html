@@ -4,112 +4,120 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Full feature list for the Pinfold mobile app — file management, security, third-party cloud backup, and social publishing." />
+  <meta name="theme-color" content="#f8fafc" />
   <title>Features — Pinfold</title>
+  <script src="/js/boot.js"></script>
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="canonical" href="https://pinfoldai.com/features.html" />
 </head>
-<body>
+<body data-page="features">
   <header class="site-header">
     <div class="container inner">
       <a class="logo" href="/"><span class="logo-mark">P</span><span>Pinfold</span></a>
       <nav class="nav-desktop">
-        <a href="/" data-nav="/">Home</a>
-        <a href="/features.html" data-nav="/features.html">Features</a>
-        <a href="/contact.html" data-nav="/contact.html">Contact</a>
-        <a href="/legal/privacy.html" data-nav="/legal/privacy.html">Privacy</a>
-        <a href="/legal/terms.html" data-nav="/legal/terms.html">Terms</a>
-        <a class="btn btn-primary btn-sm nav-cta" href="/features.html">Get the app</a>
+        <a href="/" data-nav="/" data-i18n="nav.home">Home</a>
+        <a href="/features.html" data-nav="/features.html" data-i18n="nav.features">Features</a>
+        <a href="/contact.html" data-nav="/contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="/legal/privacy.html" data-nav="/legal/privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a href="/legal/terms.html" data-nav="/legal/terms.html" data-i18n="nav.terms">Terms</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="/features.html" data-i18n="nav.getApp">Get the app</a>
       </nav>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">Menu</button>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile" data-i18n="nav.menu">Menu</button>
     </div>
     <nav id="nav-mobile" class="nav-mobile container">
-      <a href="/">Home</a>
-      <a href="/features.html">Features</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/legal/privacy.html">Privacy</a>
-      <a href="/legal/terms.html">Terms</a>
+      <a href="/" data-i18n="nav.home">Home</a>
+      <a href="/features.html" data-i18n="nav.features">Features</a>
+      <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+      <a href="/legal/privacy.html" data-i18n="nav.privacy">Privacy</a>
+      <a href="/legal/terms.html" data-i18n="nav.terms">Terms</a>
     </nav>
   </header>
 
-  <main class="section">
-    <div class="container">
-      <h1>App features</h1>
-      <p class="subtitle">Pinfold (<code>com.pinfoldai.fileexplorer</code>) groups ~48 capabilities across eight categories.</p>
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="section-label" data-i18n="features.hero.label">Full feature list</span>
+        <h1 data-i18n="features.hero.title">App features</h1>
+        <p class="subtitle" data-i18n-html="features.hero.subtitle">Pinfold (<code>com.pinfoldai.fileexplorer</code>) groups ~48 capabilities across eight categories.</p>
+      </div>
+    </section>
+    <section class="section content-page">
+      <div class="container">
 
-      <h2 id="files">File management</h2>
+      <h2 id="files" data-i18n="features.files.title">File management</h2>
       <div class="feature-grid">
-        <article class="feature-card"><h3>Browse &amp; search</h3><p>Navigate folders, search by name, filter by type (images, videos, audio, documents).</p></article>
-        <article class="feature-card"><h3>File operations</h3><p>Create, rename, delete, copy, cut, paste, multi-select, open, and share.</p></article>
-        <article class="feature-card"><h3>Archives</h3><p>Create ZIP archives; extract ZIP and other supported formats.</p></article>
-        <article class="feature-card"><h3>Favorites</h3><p>Star important files and folders for quick access.</p></article>
-        <article class="feature-card"><h3>Voice commands</h3><p>Open Downloads, show videos, search by voice from the Files tab.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.files.browse.title">Browse &amp; search</h3><p data-i18n="features.files.browse.desc">Navigate folders, search by name, filter by type (images, videos, audio, documents).</p></article>
+        <article class="feature-card"><h3 data-i18n="features.files.ops.title">File operations</h3><p data-i18n="features.files.ops.desc">Create, rename, delete, copy, cut, paste, multi-select, open, and share.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.files.archives.title">Archives</h3><p data-i18n="features.files.archives.desc">Create ZIP archives; extract ZIP and other supported formats.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.files.favorites.title">Favorites</h3><p data-i18n="features.files.favorites.desc">Star important files and folders for quick access.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.files.voice.title">Voice commands</h3><p data-i18n="features.files.voice.desc">Open Downloads, show videos, search by voice from the Files tab.</p></article>
       </div>
 
-      <h2 id="security">Security</h2>
+      <h2 id="security" data-i18n="features.security.title">Security</h2>
       <div class="feature-grid">
-        <article class="feature-card"><h3>App lock</h3><p>PIN and optional biometric unlock for the whole app with auto-lock timeout.</p></article>
-        <article class="feature-card"><h3>Folder lock</h3><p>Protect folders with PIN, biometric, or both.</p></article>
-        <article class="feature-card"><h3>Encrypted vault</h3><p>Move sensitive files into an encrypted vault with your passphrase.</p></article>
-        <article class="feature-card"><h3>Recycle bin</h3><p>Deleted files go to recycle bin first — restore or empty permanently.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.security.applock.title">App lock</h3><p data-i18n="features.security.applock.desc">PIN and optional biometric unlock for the whole app with auto-lock timeout.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.security.folderlock.title">Folder lock</h3><p data-i18n="features.security.folderlock.desc">Protect folders with PIN, biometric, or both.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.security.vault.title">Encrypted vault</h3><p data-i18n="features.security.vault.desc">Move sensitive files into an encrypted vault with your passphrase.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.security.recycle.title">Recycle bin</h3><p data-i18n="features.security.recycle.desc">Deleted files go to recycle bin first — restore or empty permanently.</p></article>
       </div>
 
-      <h2 id="storage">Storage insights</h2>
+      <h2 id="storage" data-i18n="features.storage.title">Storage insights</h2>
       <div class="feature-grid">
-        <article class="feature-card"><h3>Breakdown</h3><p>Visual breakdown by file type on the Storage tab.</p></article>
-        <article class="feature-card"><h3>Large files</h3><p>Find the biggest items consuming space on your device.</p></article>
-        <article class="feature-card"><h3>Category shortcuts</h3><p>Jump from Storage into Files filtered by media type.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.storage.breakdown.title">Breakdown</h3><p data-i18n="features.storage.breakdown.desc">Visual breakdown by file type on the Storage tab.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.storage.large.title">Large files</h3><p data-i18n="features.storage.large.desc">Find the biggest items consuming space on your device.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.storage.shortcuts.title">Category shortcuts</h3><p data-i18n="features.storage.shortcuts.desc">Jump from Storage into Files filtered by media type.</p></article>
       </div>
 
-      <h2 id="productivity">Productivity (Pro mode)</h2>
+      <h2 id="productivity" data-i18n="features.productivity.title">Productivity (Pro mode)</h2>
       <div class="feature-grid">
-        <article class="feature-card"><h3>Duplicate finder</h3><p>Scan for duplicate files and remove copies to free space.</p></article>
-        <article class="feature-card"><h3>Smart assistant</h3><p>Health scan and cleanup suggestions with optional premium AI features.</p></article>
-        <article class="feature-card"><h3>WhatsApp cleaner</h3><p>Scan and clean WhatsApp-related storage safely.</p></article>
-        <article class="feature-card"><h3>Global search</h3><p>Indexed search across allowed storage locations.</p></article>
-        <article class="feature-card"><h3>Auto-organize</h3><p>Rules to sort and move files automatically.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.productivity.duplicates.title">Duplicate finder</h3><p data-i18n="features.productivity.duplicates.desc">Scan for duplicate files and remove copies to free space.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.productivity.assistant.title">Smart assistant</h3><p data-i18n="features.productivity.assistant.desc">Health scan and cleanup suggestions with optional premium AI features.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.productivity.whatsapp.title">WhatsApp cleaner</h3><p data-i18n="features.productivity.whatsapp.desc">Scan and clean WhatsApp-related storage safely.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.productivity.search.title">Global search</h3><p data-i18n="features.productivity.search.desc">Indexed search across allowed storage locations.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.productivity.auto.title">Auto-organize</h3><p data-i18n="features.productivity.auto.desc">Rules to sort and move files automatically.</p></article>
       </div>
 
-      <h2 id="cloud">Cloud backup (your accounts)</h2>
-      <p class="subtitle">Pinfold does not host files. Optional backup uses your existing Google, Microsoft, or Dropbox storage.</p>
+      <h2 id="cloud" data-i18n="features.cloud.title">Cloud backup (your accounts)</h2>
+      <p class="subtitle" data-i18n="features.cloud.subtitle">Pinfold does not host files. Optional backup uses your existing Google, Microsoft, or Dropbox storage.</p>
       <div class="feature-grid">
-        <article class="feature-card"><h3>Provider connect</h3><p>OAuth connect to Google Drive, OneDrive, and Dropbox — files stay in your cloud account.</p></article>
-        <article class="feature-card"><h3>Sync queue</h3><p>Background backup jobs with reliability center.</p></article>
-        <article class="feature-card"><h3>Migration Center</h3><p>Advanced multi-provider backup hub (premium).</p></article>
+        <article class="feature-card"><h3 data-i18n="features.cloud.connect.title">Provider connect</h3><p data-i18n="features.cloud.connect.desc">OAuth connect to Google Drive, OneDrive, and Dropbox — files stay in your cloud account.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.cloud.sync.title">Sync queue</h3><p data-i18n="features.cloud.sync.desc">Background backup jobs with reliability center.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.cloud.migration.title">Migration Center</h3><p data-i18n="features.cloud.migration.desc">Advanced multi-provider backup hub (premium).</p></article>
       </div>
 
-      <h2 id="social">Social Publishing Hub</h2>
+      <h2 id="social" data-i18n="features.social.title">Social Publishing Hub</h2>
       <div class="feature-grid">
-        <article class="feature-card"><h3>Composer</h3><p>Pick media, write captions, optional AI captions (premium), publish now.</p></article>
-        <article class="feature-card"><h3>Queue &amp; calendar</h3><p>Pending posts and scheduled content view (scheduling is premium).</p></article>
-        <article class="feature-card"><h3>Accounts</h3><p>Connect Facebook, Instagram, Threads, X, TikTok, LinkedIn, YouTube, and more.</p></article>
-        <article class="feature-card"><h3>Analytics</h3><p>Publishing dashboard (premium).</p></article>
+        <article class="feature-card"><h3 data-i18n="features.social.composer.title">Composer</h3><p data-i18n="features.social.composer.desc">Pick media, write captions, optional AI captions (premium), publish now.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.social.queue.title">Queue &amp; calendar</h3><p data-i18n="features.social.queue.desc">Pending posts and scheduled content view (scheduling is premium).</p></article>
+        <article class="feature-card"><h3 data-i18n="features.social.accounts.title">Accounts</h3><p data-i18n="features.social.accounts.desc">Connect Facebook, Instagram, Threads, X, TikTok, LinkedIn, YouTube, and more.</p></article>
+        <article class="feature-card"><h3 data-i18n="features.social.analytics.title">Analytics</h3><p data-i18n="features.social.analytics.desc">Publishing dashboard (premium).</p></article>
       </div>
 
-      <h2 id="plans">Plans at a glance</h2>
+      <h2 id="plans" data-i18n="features.plans.title">Plans at a glance</h2>
       <div style="overflow-x:auto;">
         <table class="plan-table">
           <thead>
             <tr>
-              <th>Plan</th>
-              <th>Social accounts</th>
-              <th>Uploads/day</th>
-              <th>Scheduling</th>
-              <th>Analytics</th>
+              <th data-i18n="features.plans.plan">Plan</th>
+              <th data-i18n="features.plans.accounts">Social accounts</th>
+              <th data-i18n="features.plans.uploads">Uploads/day</th>
+              <th data-i18n="features.plans.scheduling">Scheduling</th>
+              <th data-i18n="features.plans.analytics">Analytics</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Free</td><td>1</td><td>5</td><td>No</td><td>No</td></tr>
-            <tr><td>Basic</td><td>Up to 99</td><td>Very high</td><td>Yes</td><td>Yes</td></tr>
-            <tr><td>Pro</td><td>Up to 99</td><td>Very high</td><td>Yes</td><td>Yes</td></tr>
-            <tr><td>Business</td><td>Up to 99</td><td>Very high</td><td>Yes</td><td>Yes</td></tr>
+            <tr><td data-i18n="features.plans.free">Free</td><td>1</td><td>5</td><td data-i18n="features.plans.no">No</td><td data-i18n="features.plans.no">No</td></tr>
+            <tr><td data-i18n="features.plans.basic">Basic</td><td data-i18n="features.plans.upTo99">Up to 99</td><td data-i18n="features.plans.veryHigh">Very high</td><td data-i18n="features.plans.yes">Yes</td><td data-i18n="features.plans.yes">Yes</td></tr>
+            <tr><td data-i18n="features.plans.pro">Pro</td><td data-i18n="features.plans.upTo99">Up to 99</td><td data-i18n="features.plans.veryHigh">Very high</td><td data-i18n="features.plans.yes">Yes</td><td data-i18n="features.plans.yes">Yes</td></tr>
+            <tr><td data-i18n="features.plans.business">Business</td><td data-i18n="features.plans.upTo99">Up to 99</td><td data-i18n="features.plans.veryHigh">Very high</td><td data-i18n="features.plans.yes">Yes</td><td data-i18n="features.plans.yes">Yes</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="subtitle" style="margin-top:1.5rem;">
+      <p class="subtitle" style="margin-top:1.5rem;" data-i18n="features.plans.footer">
         Subscriptions are processed through Google Play, Apple App Store, or Stripe depending on your platform.
         Manage your plan in the app under Settings → Subscription.
       </p>
-    </div>
+      </div>
     </section>
   </main>
 
@@ -118,32 +126,33 @@
       <div>
         <a class="logo" href="/"><span class="logo-mark">P</span> Pinfold</a>
         <p class="footer-tagline">
-          Productivity file management for mobile.<br />
+          <span data-i18n="footer.tagline">Productivity file management for mobile.</span><br />
           <a href="mailto:support@pinfoldai.com">support@pinfoldai.com</a>
         </p>
       </div>
       <div>
-        <h4>Product</h4>
+        <h4 data-i18n="footer.product">Product</h4>
         <ul>
-          <li><a href="/features.html">Features</a></li>
-          <li><a href="/contact.html">Contact &amp; complaints</a></li>
+          <li><a href="/features.html" data-i18n="footer.features">Features</a></li>
+          <li><a href="/contact.html" data-i18n="footer.contactComplaints">Contact &amp; complaints</a></li>
         </ul>
       </div>
       <div>
-        <h4>Legal</h4>
+        <h4 data-i18n="footer.legal">Legal</h4>
         <ul>
-          <li><a href="/legal/privacy.html">Privacy Policy</a></li>
-          <li><a href="/legal/terms.html">Terms of Service</a></li>
-          <li><a href="/legal/acceptable-use.html">Acceptable Use</a></li>
-          <li><a href="/legal/license.html">License &amp; Disclaimer</a></li>
-          <li><a href="/legal/data-deletion.html">Data Deletion</a></li>
+          <li><a href="/legal/privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+          <li><a href="/legal/terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+          <li><a href="/legal/acceptable-use.html" data-i18n="footer.acceptableUse">Acceptable Use</a></li>
+          <li><a href="/legal/license.html" data-i18n="footer.license">License &amp; Disclaimer</a></li>
+          <li><a href="/legal/data-deletion.html" data-i18n="footer.dataDeletion">Data Deletion</a></li>
         </ul>
       </div>
     </div>
-    <div class="container footer-bottom">
+    <div class="container footer-bottom" data-i18n="footer.copyright">
       &copy; 2026 Pinfold. All rights reserved. Package: com.pinfoldai.fileexplorer
     </div>
   </footer>
+  <script src="/js/i18n.js"></script>
   <script src="/js/site.js"></script>
 </body>
 </html>

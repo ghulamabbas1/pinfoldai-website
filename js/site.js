@@ -1,4 +1,127 @@
 (function () {
+  var LANG_KEY = 'pinfold-lang';
+  var THEME_KEY = 'pinfold-theme';
+  var SUPPORTED_LANGS = ['en', 'ar', 'fr', 'zh'];
+
+  function getLang() {
+    var stored = localStorage.getItem(LANG_KEY) || 'en';
+    return SUPPORTED_LANGS.indexOf(stored) >= 0 ? stored : 'en';
+  }
+
+  function getTheme() {
+    return localStorage.getItem(THEME_KEY) === 'dark' ? 'dark' : 'light';
+  }
+
+  function dict(lang) {
+    var all = window.PINFOLD_I18N || {};
+    return all[lang] || all.en || {};
+  }
+
+  function t(key, lang) {
+    var d = dict(lang || getLang());
+    return d[key] !== undefined ? d[key] : key;
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem(THEME_KEY, theme);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      meta.setAttribute('content', theme === 'dark' ? '#07080d' : '#f8fafc');
+    }
+    var toggle = document.getElementById('theme-toggle');
+    if (toggle) {
+      toggle.setAttribute(
+        'aria-label',
+        t(theme === 'dark' ? 'theme.switchToLight' : 'theme.switchToDark')
+      );
+    }
+  }
+
+  function applyI18n(lang) {
+    var d = dict(lang);
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    localStorage.setItem(LANG_KEY, lang);
+
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n');
+      if (d[key] !== undefined) {
+        el.textContent = d[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-html');
+      if (d[key] !== undefined) {
+        el.innerHTML = d[key];
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-placeholder');
+      if (d[key] !== undefined) {
+        el.placeholder = d[key];
+      }
+    });
+
+    var page = document.body.getAttribute('data-page');
+    if (page) {
+      var titleKey = 'meta.' + page + '.title';
+      var descKey = 'meta.' + page + '.description';
+      if (d[titleKey]) document.title = d[titleKey];
+      var desc = document.querySelector('meta[name="description"]');
+      if (desc && d[descKey]) desc.setAttribute('content', d[descKey]);
+    }
+
+    var langSelect = document.getElementById('lang-select');
+    if (langSelect) langSelect.value = lang;
+
+    applyTheme(getTheme());
+  }
+
+  function ensureHeaderControls() {
+    var inner = document.querySelector('.site-header .inner');
+    if (!inner || document.getElementById('header-controls')) return;
+
+    var actions = document.createElement('div');
+    actions.className = 'header-actions';
+
+    var controls = document.createElement('div');
+    controls.id = 'header-controls';
+    controls.className = 'header-controls';
+    controls.innerHTML =
+      '<label class="visually-hidden" for="lang-select" data-i18n="lang.label">Language</label>' +
+      '<select id="lang-select" class="control-select" aria-label="Language">' +
+      '<option value="en">English</option>' +
+      '<option value="fr">Français</option>' +
+      '<option value="zh">中文</option>' +
+      '<option value="ar">العربية</option>' +
+      '</select>' +
+      '<button id="theme-toggle" type="button" class="theme-toggle" aria-label="Switch theme">' +
+      '<span class="icon-sun" aria-hidden="true">☀</span>' +
+      '<span class="icon-moon" aria-hidden="true">☾</span>' +
+      '</button>';
+
+    actions.appendChild(controls);
+
+    var toggle = inner.querySelector('.nav-toggle');
+    if (toggle) {
+      inner.insertBefore(actions, toggle);
+    } else {
+      inner.appendChild(actions);
+    }
+
+    document.getElementById('lang-select').addEventListener('change', function (e) {
+      applyI18n(e.target.value);
+    });
+
+    document.getElementById('theme-toggle').addEventListener('click', function () {
+      var next = getTheme() === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    });
+  }
+
   var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.nav-toggle');
   var mobile = document.querySelector('.nav-mobile');
@@ -7,7 +130,13 @@
     if (!toggle || !mobile) return;
     mobile.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    var closeKey = 'nav.closeMenu';
+    var openKey = 'nav.openMenu';
+    var d = dict(getLang());
+    toggle.setAttribute(
+      'aria-label',
+      open ? (d[closeKey] || 'Close menu') : (d[openKey] || d['nav.menu'] || 'Menu')
+    );
     document.body.style.overflow = open ? 'hidden' : '';
   }
 
@@ -87,11 +216,12 @@
       window.location.href = mailto;
       var notice = document.getElementById('form-notice');
       if (notice) {
-        notice.textContent =
-          'Your email app should open with a pre-filled message to support@pinfoldai.com. ' +
-          'If it did not open, email us directly at support@pinfoldai.com.';
+        notice.textContent = t('contact.form.notice');
         notice.hidden = false;
       }
     });
   }
+
+  ensureHeaderControls();
+  applyI18n(getLang());
 })();

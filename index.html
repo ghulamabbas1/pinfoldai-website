@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Pinfold — organize files, free space, and publish to social platforms from one productivity app for Android." />
-  <meta name="theme-color" content="#07080d" />
+  <meta name="theme-color" content="#f8fafc" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pinfoldai.com/" />
   <meta property="og:title" content="Pinfold — Organize files. Free space. Share your story." />
@@ -12,10 +12,11 @@
   <meta property="og:site_name" content="Pinfold" />
   <meta name="twitter:card" content="summary_large_image" />
   <title>Pinfold — Organize files. Free space. Share your story.</title>
+  <script src="/js/boot.js"></script>
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="canonical" href="https://pinfoldai.com/" />
 </head>
-<body>
+<body data-page="home">
   <header class="site-header">
     <div class="container inner">
       <a class="logo" href="/">
@@ -23,21 +24,21 @@
         <span>Pinfold</span>
       </a>
       <nav class="nav-desktop">
-        <a href="/" data-nav="/">Home</a>
-        <a href="/features.html" data-nav="/features.html">Features</a>
-        <a href="/contact.html" data-nav="/contact.html">Contact</a>
-        <a href="/legal/privacy.html" data-nav="/legal/privacy.html">Privacy</a>
-        <a href="/legal/terms.html" data-nav="/legal/terms.html">Terms</a>
-        <a class="btn btn-primary btn-sm nav-cta" href="/features.html">Get the app</a>
+        <a href="/" data-nav="/" data-i18n="nav.home">Home</a>
+        <a href="/features.html" data-nav="/features.html" data-i18n="nav.features">Features</a>
+        <a href="/contact.html" data-nav="/contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="/legal/privacy.html" data-nav="/legal/privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a href="/legal/terms.html" data-nav="/legal/terms.html" data-i18n="nav.terms">Terms</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="/features.html" data-i18n="nav.getApp">Get the app</a>
       </nav>
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">Menu</button>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile" data-i18n="nav.menu">Menu</button>
     </div>
     <nav id="nav-mobile" class="nav-mobile container">
-      <a href="/">Home</a>
-      <a href="/features.html">Features</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/legal/privacy.html">Privacy</a>
-      <a href="/legal/terms.html">Terms</a>
+      <a href="/" data-i18n="nav.home">Home</a>
+      <a href="/features.html" data-i18n="nav.features">Features</a>
+      <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+      <a href="/legal/privacy.html" data-i18n="nav.privacy">Privacy</a>
+      <a href="/legal/terms.html" data-i18n="nav.terms">Terms</a>
     </nav>
   </header>
 
@@ -47,34 +48,34 @@
         <div class="reveal">
           <div class="hero-badge">
             <span class="hero-badge-dot" aria-hidden="true"></span>
-            Android productivity app
+            <span data-i18n="home.hero.badge">Android productivity app</span>
           </div>
           <h1>
-            Organize files.<br />
-            <span class="text-gradient">Free space.</span><br />
-            Share your story.
+            <span data-i18n="home.hero.title1">Organize files.</span><br />
+            <span class="text-gradient" data-i18n="home.hero.title2">Free space.</span><br />
+            <span data-i18n="home.hero.title3">Share your story.</span>
           </h1>
-          <p class="lead">
+          <p class="lead" data-i18n="home.hero.lead">
             Pinfold is a productivity and business file-management app for Android.
             Browse and secure files on your device, back up to your own Google Drive, OneDrive, or Dropbox,
             and publish to social platforms — all from one place.
           </p>
           <div class="btn-row">
-            <a class="btn btn-primary" href="/features.html">Explore features</a>
-            <a class="btn btn-secondary" href="/contact.html">Contact support</a>
+            <a class="btn btn-primary" href="/features.html" data-i18n="home.hero.explore">Explore features</a>
+            <a class="btn btn-secondary" href="/contact.html" data-i18n="home.hero.contact">Contact support</a>
           </div>
           <div class="hero-stats">
             <div class="stat-item">
               <strong>48+</strong>
-              <span>Built-in capabilities</span>
+              <span data-i18n="home.stats.capabilities">Built-in capabilities</span>
             </div>
             <div class="stat-item">
               <strong>8</strong>
-              <span>Feature categories</span>
+              <span data-i18n="home.stats.categories">Feature categories</span>
             </div>
             <div class="stat-item">
               <strong>7+</strong>
-              <span>Social platforms</span>
+              <span data-i18n="home.stats.platforms">Social platforms</span>
             </div>
           </div>
         </div>
@@ -85,7 +86,7 @@
             <div class="device-screen">
               <div class="mock-bar w55"></div>
               <div class="mock-card accent">
-                <div class="mock-card-title">Social Hub</div>
+                <div class="mock-card-title" data-i18n="home.mock.socialHub">Social Hub</div>
                 <div class="mock-pills">
                   <span class="mock-pill">Instagram</span>
                   <span class="mock-pill">Facebook</span>
@@ -94,12 +95,12 @@
                 </div>
               </div>
               <div class="mock-card">
-                <div class="mock-card-title">Cloud backup</div>
+                <div class="mock-card-title" data-i18n="home.mock.cloudBackup">Cloud backup</div>
                 <div class="mock-bar w90"></div>
                 <div class="mock-bar w75"></div>
               </div>
               <div class="mock-card">
-                <div class="mock-card-title">Vault · 12 files</div>
+                <div class="mock-card-title" data-i18n="home.mock.vault">Vault · 12 files</div>
                 <div class="mock-bar w55"></div>
               </div>
             </div>
@@ -111,40 +112,40 @@
     <section class="section section-alt">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">Capabilities</span>
-          <h2>Everything you need on your phone</h2>
-          <p>Local file tools, third-party cloud backup, and social publishing — designed for everyday users and creators.</p>
+          <span class="section-label" data-i18n="home.capabilities.label">Capabilities</span>
+          <h2 data-i18n="home.capabilities.title">Everything you need on your phone</h2>
+          <p data-i18n="home.capabilities.subtitle">Local file tools, third-party cloud backup, and social publishing — designed for everyday users and creators.</p>
         </div>
         <div class="feature-grid bento">
           <article class="feature-card reveal">
             <div class="icon">📁</div>
-            <h3>File management</h3>
-            <p>Browse, search, sort, copy, move, compress, favorites, voice commands, and multi-select operations.</p>
+            <h3 data-i18n="home.feature.files.title">File management</h3>
+            <p data-i18n="home.feature.files.desc">Browse, search, sort, copy, move, compress, favorites, voice commands, and multi-select operations.</p>
           </article>
           <article class="feature-card reveal">
             <div class="icon">🔒</div>
-            <h3>Security</h3>
-            <p>App PIN lock, biometric unlock, folder lock, and encrypted vault for sensitive files.</p>
+            <h3 data-i18n="home.feature.security.title">Security</h3>
+            <p data-i18n="home.feature.security.desc">App PIN lock, biometric unlock, folder lock, and encrypted vault for sensitive files.</p>
           </article>
           <article class="feature-card reveal">
             <div class="icon">📊</div>
-            <h3>Storage insights</h3>
-            <p>See what uses your space — images, videos, audio, documents, and large files at a glance.</p>
+            <h3 data-i18n="home.feature.storage.title">Storage insights</h3>
+            <p data-i18n="home.feature.storage.desc">See what uses your space — images, videos, audio, documents, and large files at a glance.</p>
           </article>
           <article class="feature-card reveal">
             <div class="icon">⚡</div>
-            <h3>Productivity</h3>
-            <p>Duplicate finder, smart assistant, WhatsApp cleaner, indexed search, and auto-organize rules.</p>
+            <h3 data-i18n="home.feature.productivity.title">Productivity</h3>
+            <p data-i18n="home.feature.productivity.desc">Duplicate finder, smart assistant, WhatsApp cleaner, indexed search, and auto-organize rules.</p>
           </article>
           <article class="feature-card reveal">
             <div class="icon">☁️</div>
-            <h3>Cloud backup</h3>
-            <p>Connect Google Drive, OneDrive, or Dropbox. Your accounts — not Pinfold storage.</p>
+            <h3 data-i18n="home.feature.cloud.title">Cloud backup</h3>
+            <p data-i18n="home.feature.cloud.desc">Connect Google Drive, OneDrive, or Dropbox. Your accounts — not Pinfold storage.</p>
           </article>
           <article class="feature-card reveal">
             <div class="icon">📣</div>
-            <h3>Social publishing</h3>
-            <p>Compose once and publish to Instagram, Facebook, Threads, X, TikTok, LinkedIn, and more.</p>
+            <h3 data-i18n="home.feature.social.title">Social publishing</h3>
+            <p data-i18n="home.feature.social.desc">Compose once and publish to Instagram, Facebook, Threads, X, TikTok, LinkedIn, and more.</p>
           </article>
         </div>
       </div>
@@ -153,9 +154,9 @@
     <section class="section">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">Social Hub</span>
-          <h2>Post once, share everywhere</h2>
-          <p>Connect your accounts and publish from a single composer — posts, stories, and scheduled content.</p>
+          <span class="section-label" data-i18n="home.social.label">Social Hub</span>
+          <h2 data-i18n="home.social.title">Post once, share everywhere</h2>
+          <p data-i18n="home.social.subtitle">Connect your accounts and publish from a single composer — posts, stories, and scheduled content.</p>
         </div>
         <div class="platform-strip reveal">
           <span class="platform-chip">Instagram</span>
@@ -172,24 +173,24 @@
     <section class="section section-alt">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">How it works</span>
-          <h2>Three steps to a cleaner phone</h2>
+          <span class="section-label" data-i18n="home.steps.label">How it works</span>
+          <h2 data-i18n="home.steps.title">Three steps to a cleaner phone</h2>
         </div>
         <div class="steps-grid">
           <article class="step-card reveal">
             <div class="step-num">01</div>
-            <h3>Organize locally</h3>
-            <p>Browse, search, and sort files. Lock sensitive folders and move private items into an encrypted vault.</p>
+            <h3 data-i18n="home.step1.title">Organize locally</h3>
+            <p data-i18n="home.step1.desc">Browse, search, and sort files. Lock sensitive folders and move private items into an encrypted vault.</p>
           </article>
           <article class="step-card reveal">
             <div class="step-num">02</div>
-            <h3>Back up to your cloud</h3>
-            <p>Connect Google Drive, OneDrive, or Dropbox — files stay in your own accounts, not on Pinfold servers.</p>
+            <h3 data-i18n="home.step2.title">Back up to your cloud</h3>
+            <p data-i18n="home.step2.desc">Connect Google Drive, OneDrive, or Dropbox — files stay in your own accounts, not on Pinfold servers.</p>
           </article>
           <article class="step-card reveal">
             <div class="step-num">03</div>
-            <h3>Publish your story</h3>
-            <p>Write once in the Social Hub and share to multiple platforms, including stories and scheduled posts.</p>
+            <h3 data-i18n="home.step3.title">Publish your story</h3>
+            <p data-i18n="home.step3.desc">Write once in the Social Hub and share to multiple platforms, including stories and scheduled posts.</p>
           </article>
         </div>
       </div>
@@ -198,11 +199,11 @@
     <section class="section">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">Trust &amp; compliance</span>
-          <h2>Built for productivity and business</h2>
-          <p>Pinfold is a productivity tool — not an adult-entertainment, gambling, or dating product.</p>
+          <span class="section-label" data-i18n="home.trust.label">Trust &amp; compliance</span>
+          <h2 data-i18n="home.trust.title">Built for productivity and business</h2>
+          <p data-i18n="home.trust.subtitle">Pinfold is a productivity tool — not an adult-entertainment, gambling, or dating product.</p>
         </div>
-        <div class="notice notice-trust reveal">
+        <div class="notice notice-trust reveal" data-i18n-html="home.trust.notice">
           We do not promote pornography, gambling, deceptive advertising, or illegal content.
           Premium subscriptions unlock productivity features only. See our
           <a href="/legal/acceptable-use.html">Acceptable Use Policy</a> and
@@ -212,11 +213,11 @@
     </section>
 
     <div class="cta-banner reveal">
-      <h2>Ready to take control of your files?</h2>
-      <p>Explore everything Pinfold offers — from vault encryption to multi-platform publishing.</p>
+      <h2 data-i18n="home.cta.title">Ready to take control of your files?</h2>
+      <p data-i18n="home.cta.subtitle">Explore everything Pinfold offers — from vault encryption to multi-platform publishing.</p>
       <div class="btn-row" style="justify-content:center;">
-        <a class="btn btn-primary" href="/features.html">View all features</a>
-        <a class="btn btn-secondary" href="/contact.html">Get in touch</a>
+        <a class="btn btn-primary" href="/features.html" data-i18n="home.cta.features">View all features</a>
+        <a class="btn btn-secondary" href="/contact.html" data-i18n="home.cta.contact">Get in touch</a>
       </div>
     </div>
   </main>
@@ -226,32 +227,33 @@
       <div>
         <a class="logo" href="/"><span class="logo-mark">P</span> Pinfold</a>
         <p class="footer-tagline">
-          Productivity file management for mobile.<br />
+          <span data-i18n="footer.tagline">Productivity file management for mobile.</span><br />
           <a href="mailto:support@pinfoldai.com">support@pinfoldai.com</a>
         </p>
       </div>
       <div>
-        <h4>Product</h4>
+        <h4 data-i18n="footer.product">Product</h4>
         <ul>
-          <li><a href="/features.html">Features</a></li>
-          <li><a href="/contact.html">Contact &amp; complaints</a></li>
+          <li><a href="/features.html" data-i18n="footer.features">Features</a></li>
+          <li><a href="/contact.html" data-i18n="footer.contactComplaints">Contact &amp; complaints</a></li>
         </ul>
       </div>
       <div>
-        <h4>Legal</h4>
+        <h4 data-i18n="footer.legal">Legal</h4>
         <ul>
-          <li><a href="/legal/privacy.html">Privacy Policy</a></li>
-          <li><a href="/legal/terms.html">Terms of Service</a></li>
-          <li><a href="/legal/acceptable-use.html">Acceptable Use</a></li>
-          <li><a href="/legal/license.html">License &amp; Disclaimer</a></li>
-          <li><a href="/legal/data-deletion.html">Data Deletion</a></li>
+          <li><a href="/legal/privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+          <li><a href="/legal/terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+          <li><a href="/legal/acceptable-use.html" data-i18n="footer.acceptableUse">Acceptable Use</a></li>
+          <li><a href="/legal/license.html" data-i18n="footer.license">License &amp; Disclaimer</a></li>
+          <li><a href="/legal/data-deletion.html" data-i18n="footer.dataDeletion">Data Deletion</a></li>
         </ul>
       </div>
     </div>
-    <div class="container footer-bottom">
+    <div class="container footer-bottom" data-i18n="footer.copyright">
       &copy; 2026 Pinfold. All rights reserved. Package: com.pinfoldai.fileexplorer
     </div>
   </footer>
+  <script src="/js/i18n.js"></script>
   <script src="/js/site.js"></script>
 </body>
 </html>
