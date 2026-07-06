@@ -891,6 +891,12 @@ html[dir="rtl"] .control-select {
   margin: 2rem 0 0.75rem;
 }
 
+.legal-doc h3 {
+  font-size: 1.05rem;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--text);
+}
+
 .legal-doc p,
 .legal-doc li {
   color: var(--legal-text);
