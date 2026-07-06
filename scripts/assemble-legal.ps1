@@ -4,6 +4,8 @@ $repoRoot = Split-Path -Parent $PSScriptRoot
 $contentDir = Join-Path $repoRoot "legal\content"
 $legalDir = Join-Path $repoRoot "legal"
 $headerControls = (Get-Content (Join-Path $repoRoot "partials\header-controls.html") -Raw).TrimEnd()
+$headIcons = (Get-Content (Join-Path $repoRoot "partials\head-icons.html") -Raw).TrimEnd()
+$logoImg = (Get-Content (Join-Path $repoRoot "partials\logo-img.html") -Raw).TrimEnd()
 
 $pages = @(
     @{ Slug = "eula"; Page = "eula"; Title = "End User License Agreement - Pinfold"; Desc = "EULA for the Pinfold AI mobile application." },
@@ -41,6 +43,7 @@ $header = @'
   <meta name="description" content="{DESC}" />
   <title>{TITLE}</title>
   <meta name="theme-color" content="#f8fafc" />
+$HEAD_ICONS
   <script src="/js/boot.js"></script>
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="canonical" href="https://pinfoldai.com/legal/{SLUG}.html" />
@@ -48,7 +51,7 @@ $header = @'
 <body data-page="{PAGE}">
   <header class="site-header">
     <div class="container inner">
-      <a class="logo" href="/"><span class="logo-mark">P</span><span>Pinfold</span></a>
+      <a class="logo" href="/">$LOGO_IMG<span>Pinfold</span></a>
 $HEADER_CONTROLS
       <nav class="nav-desktop">
         <a href="/" data-nav="/" data-i18n="nav.home">Home</a>
@@ -79,7 +82,7 @@ $HEADER_CONTROLS
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="logo" href="/"><span class="logo-mark">P</span> Pinfold</a>
+        <a class="logo" href="/">$LOGO_IMG<span> Pinfold</span></a>
         <p class="footer-tagline">
           <span data-i18n="footer.tagline">Productivity file management for mobile.</span><br />
           <a href="mailto:support@pinfoldai.com">support@pinfoldai.com</a>
@@ -127,6 +130,8 @@ foreach ($p in $pages) {
     $html = $html.Replace('{PAGE}', $p.Page)
     $html = $html.Replace('{BODY}', $body.Trim())
     $html = $html.Replace('$HEADER_CONTROLS', $headerControls)
+    $html = $html.Replace('$HEAD_ICONS', $headIcons)
+    $html = $html.Replace('$LOGO_IMG', $logoImg)
     $outPath = Join-Path $legalDir "$($p.Slug).html"
     [System.IO.File]::WriteAllText($outPath, $html)
     Write-Host "Built $outPath"
