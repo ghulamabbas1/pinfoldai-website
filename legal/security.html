@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Security disclaimer for Pinfold." />
+  <title>Security Disclaimer - Pinfold</title>
+  <meta name="theme-color" content="#f8fafc" />
+  <script src="/js/boot.js"></script>
+  <link rel="stylesheet" href="/css/site.css" />
+  <link rel="canonical" href="https://pinfoldai.com/legal/security.html" />
+</head>
+<body data-page="security">
+  <header class="site-header">
+    <div class="container inner">
+      <a class="logo" href="/"><span class="logo-mark">P</span><span>Pinfold</span></a>
+      <nav class="nav-desktop">
+        <a href="/" data-nav="/" data-i18n="nav.home">Home</a>
+        <a href="/features.html" data-nav="/features.html" data-i18n="nav.features">Features</a>
+        <a href="/contact.html" data-nav="/contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="/legal/index.html" data-nav="/legal/index.html" data-i18n="legal.hub">Legal</a>
+        <a href="/legal/privacy.html" data-nav="/legal/privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="/features.html" data-i18n="nav.getApp">Get the app</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile" data-i18n="nav.menu">Menu</button>
+    </div>
+    <nav id="nav-mobile" class="nav-mobile container">
+      <a href="/" data-i18n="nav.home">Home</a>
+      <a href="/features.html" data-i18n="nav.features">Features</a>
+      <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+      <a href="/legal/index.html" data-i18n="legal.hub">Legal</a>
+      <a href="/legal/privacy.html" data-i18n="nav.privacy">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="legal-doc">
+    <div class="container-narrow">
+      <p class="legal-breadcrumb"><a href="/legal/index.html" data-i18n="legal.hub">Legal Center</a></p>
+<h1 data-i18n="security.title">Security Disclaimer</h1>
+<p class="meta" data-i18n="security.meta">Last updated: July 6, 2026 Â· Version 2026-07-06</p>
+
+<p data-i18n-html="security.intro">
+  Pinfold (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) takes reasonable measures to protect the Pinfold mobile
+  application (<code>com.pinfoldai.fileexplorer</code>) and related API services at
+  <a href="https://api.pinfoldai.com">api.pinfoldai.com</a> (collectively, the &ldquo;Service&rdquo;).
+  This Security Disclaimer describes our security practices at a high level, their limitations, and your responsibilities.
+  It supplements our <a href="/legal/privacy.html">Privacy Policy</a>,
+  <a href="/legal/terms.html">Terms of Service</a>, and
+  <a href="/legal/license.html">License &amp; Disclaimer</a>.
+</p>
+
+<h2 data-i18n="security.s1.title">1. No absolute security</h2>
+<p data-i18n="security.s1.p">
+  No method of electronic storage or transmission over the internet is completely secure. While we implement safeguards
+  designed to protect the Service, we cannot guarantee that unauthorized access, disclosure, alteration, loss, or
+  destruction of data will never occur. You use the Service at your own risk.
+</p>
+
+<h2 data-i18n="security.s2.title">2. Measures we employ</h2>
+<p data-i18n="security.s2.p">Depending on the feature and environment, we may use measures such as:</p>
+<ul>
+  <li data-i18n="security.s2.l1">TLS/HTTPS encryption for data in transit between the App and our servers.</li>
+  <li data-i18n="security.s2.l2">Encryption at rest for sensitive server-side data, including OAuth tokens and credentials.</li>
+  <li data-i18n="security.s2.l3">Access controls, authentication, and role-based permissions for production systems.</li>
+  <li data-i18n="security.s2.l4">Network segmentation, firewalls, and monitoring on cloud infrastructure (including Azure and Hetzner).</li>
+  <li data-i18n="security.s2.l5">Regular patching and dependency updates for backend services built on .NET.</li>
+  <li data-i18n="security.s2.l6">Rate limiting and abuse detection on public API endpoints.</li>
+  <li data-i18n="security.s2.l7">Secure development practices for the Flutter mobile application.</li>
+</ul>
+<p data-i18n="security.s2.p2">
+  We do not publicly disclose detailed security architecture, as doing so could assist attackers. We may describe
+  practices at a summary level in security questionnaires for enterprise customers where appropriate.
+</p>
+
+<h2 data-i18n="security.s3.title">3. Your responsibilities</h2>
+<p data-i18n="security.s3.p">Security is shared. You are responsible for:</p>
+<ul>
+  <li data-i18n="security.s3.l1">Maintaining a strong, unique password and enabling multi-factor authentication where offered.</li>
+  <li data-i18n="security.s3.l2">Protecting your device passcode, biometric unlock, and app lock PIN stored locally on your device.</li>
+  <li data-i18n="security.s3.l3">Safeguarding vault passphrases and encryption keys â€” we cannot recover lost passphrases.</li>
+  <li data-i18n="security.s3.l4">Keeping your operating system and the Pinfold App updated to the latest available version.</li>
+  <li data-i18n="security.s3.l5">Not jailbreaking, rooting, or disabling device security features that protect the App.</li>
+  <li data-i18n="security.s3.l6">Reviewing connected social and cloud account permissions and revoking access you no longer need.</li>
+  <li data-i18n="security.s3.l7">Not sharing account credentials or OAuth authorizations with unauthorized persons.</li>
+  <li data-i18n="security.s3.l8">Verifying the authenticity of emails and links claiming to be from Pinfold before entering credentials.</li>
+</ul>
+
+<h2 data-i18n="security.s4.title">4. Local device security</h2>
+<p data-i18n="security.s4.p">
+  Much of your file data remains on your device. Device loss, theft, malware, or unauthorized physical access may
+  compromise local data regardless of our server-side protections. Use device encryption, remote wipe features, and app
+  lock where available.
+</p>
+
+<h2 data-i18n="security.s5.title">5. Third-party services</h2>
+<p data-i18n-html="security.s5.p">
+  When you connect Google, Apple, Meta, Microsoft, TikTok, LinkedIn, X, YouTube, Threads, Dropbox, Stripe, or other
+  providers, your data is also subject to their security practices. We are not responsible for security incidents
+  originating at third-party services. See our
+  <a href="/legal/third-party.html">Third-Party Services Disclaimer</a>.
+</p>
+
+<h2 data-i18n="security.s6.title">6. AI and automated features</h2>
+<p data-i18n-html="security.s6.p">
+  AI features may process text and metadata you submit. Do not submit passwords, payment card numbers, government ID
+  numbers, or other highly sensitive data to AI tools. AI output may contain unsafe instructions or inaccurate security
+  guidance â€” always verify before acting. See our <a href="/legal/ai-disclaimer.html">AI Disclaimer</a>.
+</p>
+
+<h2 data-i18n="security.s7.title">7. Incident response</h2>
+<p data-i18n="security.s7.p">
+  If we become aware of a security incident affecting personal data in our control, we will investigate promptly and
+  take reasonable steps to mitigate harm. Where required by applicable law, we will notify affected users and regulators
+  within prescribed timeframes.
+</p>
+
+<h2 data-i18n="security.s8.title">8. Reporting vulnerabilities</h2>
+<p data-i18n-html="security.s8.p">
+  If you believe you have discovered a security vulnerability in the Service, please report it responsibly to
+  <a href="mailto:support@pinfoldai.com?subject=Security%20vulnerability%20report">support@pinfoldai.com</a>.
+  Do not publicly disclose vulnerabilities until we have had a reasonable opportunity to investigate and remediate.
+  We appreciate good-faith reports and may acknowledge researchers at our discretion.
+</p>
+
+<h2 data-i18n="security.s9.title">9. No fiduciary duty</h2>
+<p data-i18n="security.s9.p">
+  Our security measures do not create a fiduciary or special relationship with you. We do not guarantee protection against
+  all threats, including zero-day exploits, nation-state actors, or social engineering attacks targeting you personally.
+</p>
+
+<h2 data-i18n="security.s10.title">10. Limitation of liability</h2>
+<p data-i18n="security.s10.p">
+  To the maximum extent permitted by law, Pinfold is not liable for damages arising from unauthorized access, data breach,
+  malware, phishing, or other security incidents except as expressly required by applicable law. Our aggregate liability
+  is subject to the limitations in our Terms of Service and License &amp; Disclaimer.
+</p>
+
+<h2 data-i18n="security.s11.title">11. Changes</h2>
+<p data-i18n="security.s11.p">
+  We may update security practices and this disclaimer as technology and threats evolve. Material changes will be
+  reflected in the &ldquo;Last updated&rdquo; date above.
+</p>
+
+<h2 data-i18n="security.s12.title">12. Contact</h2>
+<p data-i18n-html="security.s12.p">
+  Security inquiries:
+  <a href="mailto:support@pinfoldai.com?subject=Security%20inquiry">support@pinfoldai.com</a>
+</p>
+
+<p data-i18n-html="security.seealso">
+  See also:
+  <a href="/legal/privacy.html">Privacy Policy</a> Â·
+  <a href="/legal/data-retention.html">Data Retention Policy</a> Â·
+  <a href="/legal/third-party.html">Third-Party Services Disclaimer</a>
+</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="/"><span class="logo-mark">P</span> Pinfold</a>
+        <p class="footer-tagline">
+          <span data-i18n="footer.tagline">Productivity file management for mobile.</span><br />
+          <a href="mailto:support@pinfoldai.com">support@pinfoldai.com</a>
+        </p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.product">Product</h4>
+        <ul>
+          <li><a href="/features.html" data-i18n="footer.features">Features</a></li>
+          <li><a href="/contact.html" data-i18n="footer.contactComplaints">Contact &amp; complaints</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <ul>
+          <li><a href="/legal/index.html" data-i18n="legal.hub">Legal Center</a></li>
+          <li><a href="/legal/privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+          <li><a href="/legal/terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+          <li><a href="/legal/eula.html" data-i18n="legal.eula">EULA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom" data-i18n="footer.copyright">
+      &copy; 2026 Pinfold. All rights reserved. Package: com.pinfoldai.fileexplorer
+    </div>
+  </footer>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/i18n-legal.js"></script>
+  <script src="/js/i18n-legal-suite.js"></script>
+  <script src="/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Data retention policy for Pinfold." />
+  <title>Data Retention Policy - Pinfold</title>
+  <meta name="theme-color" content="#f8fafc" />
+  <script src="/js/boot.js"></script>
+  <link rel="stylesheet" href="/css/site.css" />
+  <link rel="canonical" href="https://pinfoldai.com/legal/data-retention.html" />
+</head>
+<body data-page="retention">
+  <header class="site-header">
+    <div class="container inner">
+      <a class="logo" href="/"><span class="logo-mark">P</span><span>Pinfold</span></a>
+      <nav class="nav-desktop">
+        <a href="/" data-nav="/" data-i18n="nav.home">Home</a>
+        <a href="/features.html" data-nav="/features.html" data-i18n="nav.features">Features</a>
+        <a href="/contact.html" data-nav="/contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="/legal/index.html" data-nav="/legal/index.html" data-i18n="legal.hub">Legal</a>
+        <a href="/legal/privacy.html" data-nav="/legal/privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="/features.html" data-i18n="nav.getApp">Get the app</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile" data-i18n="nav.menu">Menu</button>
+    </div>
+    <nav id="nav-mobile" class="nav-mobile container">
+      <a href="/" data-i18n="nav.home">Home</a>
+      <a href="/features.html" data-i18n="nav.features">Features</a>
+      <a href="/contact.html" data-i18n="nav.contact">Contact</a>
+      <a href="/legal/index.html" data-i18n="legal.hub">Legal</a>
+      <a href="/legal/privacy.html" data-i18n="nav.privacy">Privacy</a>
+    </nav>
+  </header>
+
+  <main class="legal-doc">
+    <div class="container-narrow">
+      <p class="legal-breadcrumb"><a href="/legal/index.html" data-i18n="legal.hub">Legal Center</a></p>
+<h1 data-i18n="data-retention.title">Data Retention Policy</h1>
+<p class="meta" data-i18n="data-retention.meta">Last updated: July 6, 2026 Â· Version 2026-07-06</p>
+
+<p data-i18n-html="data-retention.intro">
+  This Data Retention Policy describes how long Pinfold (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;) retains
+  information processed through the Pinfold mobile application (<code>com.pinfoldai.fileexplorer</code>) and related
+  services at <a href="https://api.pinfoldai.com">api.pinfoldai.com</a> (collectively, the &ldquo;Service&rdquo;).
+  It supplements our <a href="/legal/privacy.html">Privacy Policy</a> and
+  <a href="/legal/data-deletion.html">Data Deletion</a> page.
+</p>
+
+<h2 data-i18n="data-retention.s1.title">1. General principles</h2>
+<ul>
+  <li data-i18n="data-retention.s1.l1">We retain data only as long as necessary to provide the Service, comply with law, resolve disputes, and enforce agreements.</li>
+  <li data-i18n="data-retention.s1.l2">Retention periods may vary by data category, feature used, subscription status, and legal jurisdiction.</li>
+  <li data-i18n="data-retention.s1.l3">When retention ends, we delete or anonymize data using commercially reasonable methods, subject to technical limitations and legal holds.</li>
+  <li data-i18n="data-retention.s1.l4">Backup systems may retain deleted data for a limited period before automatic purge.</li>
+</ul>
+
+<h2 data-i18n="data-retention.s2.title">2. Retention schedule</h2>
+<p data-i18n="data-retention.s2.p">
+  The table below summarizes typical retention periods. These are guidelines, not guarantees; specific records may be kept
+  longer when required by law, litigation hold, fraud investigation, or platform dispute resolution.
+</p>
+
+<div class="legal-table-wrap">
+  <table class="legal-table">
+    <thead>
+      <tr>
+        <th scope="col" data-i18n="data-retention.table.col1">Data category</th>
+        <th scope="col" data-i18n="data-retention.table.col2">Typical retention period</th>
+        <th scope="col" data-i18n="data-retention.table.col3">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-i18n="data-retention.table.r1.c1">Account profile (email, display name, country, preferences)</td>
+        <td data-i18n="data-retention.table.r1.c2">While account is active + up to 30 days after deletion request</td>
+        <td data-i18n="data-retention.table.r1.c3">Deleted or anonymized after account deletion completes, unless legal hold applies.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r2.c1">Authentication credentials &amp; session tokens</td>
+        <td data-i18n="data-retention.table.r2.c2">Session: hours to 30 days; refresh tokens: until logout, revocation, or account deletion</td>
+        <td data-i18n="data-retention.table.r2.c3">Revoked immediately on password change or explicit sign-out of all devices where supported.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r3.c1">OAuth tokens (social &amp; cloud providers)</td>
+        <td data-i18n="data-retention.table.r3.c2">While connection is active; deleted within 30 days of disconnect or account deletion</td>
+        <td data-i18n="data-retention.table.r3.c3">Includes Meta, Google, Microsoft, TikTok, LinkedIn, X, YouTube, Threads, Dropbox, and similar integrations.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r4.c1">Social publishing queue &amp; schedule metadata</td>
+        <td data-i18n="data-retention.table.r4.c2">Until published or cancelled + up to 90 days</td>
+        <td data-i18n="data-retention.table.r4.c3">Failed jobs and logs may be retained briefly for troubleshooting.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r5.c1">Uploaded media for social publishing (server copies)</td>
+        <td data-i18n="data-retention.table.r5.c2">Until publish completes + up to 30 days</td>
+        <td data-i18n="data-retention.table.r5.c3">Temporary staging only; not a long-term media archive.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r6.c1">AI feature inputs &amp; outputs (server-processed)</td>
+        <td data-i18n="data-retention.table.r6.c2">Up to 30 days, or not retained where processing is ephemeral</td>
+        <td data-i18n="data-retention.table.r6.c3">Some AI requests are processed in memory without persistent storage. See Privacy Policy.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r7.c1">Subscription &amp; billing records</td>
+        <td data-i18n="data-retention.table.r7.c2">Life of account + 7 years (or longer if required by tax law)</td>
+        <td data-i18n="data-retention.table.r7.c3">Processed via Google Play, Apple App Store, or Stripe; subject to their retention as well.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r8.c1">Support tickets &amp; feedback</td>
+        <td data-i18n="data-retention.table.r8.c2">Up to 3 years after case closure</td>
+        <td data-i18n="data-retention.table.r8.c3">May be retained longer if related to an open dispute or legal matter.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r9.c1">Abuse reports &amp; moderation records</td>
+        <td data-i18n="data-retention.table.r9.c2">Up to 5 years</td>
+        <td data-i18n="data-retention.table.r9.c3">Retained to enforce policies and respond to repeat violations.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r10.c1">Security &amp; access logs (server/API)</td>
+        <td data-i18n="data-retention.table.r10.c2">90 days to 12 months</td>
+        <td data-i18n="data-retention.table.r10.c3">May include IP address, timestamp, endpoint, and error codes; generally not linked to file contents.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r11.c1">Anonymized analytics &amp; aggregated metrics</td>
+        <td data-i18n="data-retention.table.r11.c2">Up to 26 months</td>
+        <td data-i18n="data-retention.table.r11.c3">Does not identify individual users after anonymization.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r12.c1">Local device data (vault, cache, app lock PIN)</td>
+        <td data-i18n="data-retention.table.r12.c2">Until you delete the App, clear data, or wipe the device</td>
+        <td data-i18n="data-retention.table.r12.c3">Stored on your device; not uploaded unless you enable sync or cloud features.</td>
+      </tr>
+      <tr>
+        <td data-i18n="data-retention.table.r13.c1">Legal hold &amp; regulatory records</td>
+        <td data-i18n="data-retention.table.r13.c2">As required by applicable law or court order</td>
+        <td data-i18n="data-retention.table.r13.c3">Overrides standard deletion schedules while the hold is in effect.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 data-i18n="data-retention.s3.title">3. Account deletion</h2>
+<p data-i18n-html="data-retention.s3.p">
+  When you delete your account, we begin removing server-side personal data within our standard processing window,
+  typically within 30 days. Some data may persist in encrypted backups for up to 90 days before automatic purge.
+  For step-by-step instructions, see <a href="/legal/data-deletion.html">Data Deletion</a>.
+</p>
+
+<h2 data-i18n="data-retention.s4.title">4. Disconnecting third-party services</h2>
+<p data-i18n="data-retention.s4.p">
+  Disconnecting a social or cloud provider removes our authorization to access that service and triggers deletion of
+  associated OAuth tokens within the periods above. Content already stored on the third-party platform remains under that
+  platform&rsquo;s policies.
+</p>
+
+<h2 data-i18n="data-retention.s5.title">5. Inactive accounts</h2>
+<p data-i18n="data-retention.s5.p">
+  We may identify accounts with no login or meaningful activity for an extended period (typically 24 months or more).
+  We may send a notice to your registered email before restricting features or deleting inactive account data, where
+  practicable and permitted by law.
+</p>
+
+<h2 data-i18n="data-retention.s6.title">6. Your choices</h2>
+<ul>
+  <li data-i18n="data-retention.s6.l1">Delete your account in Settings to initiate server-side deletion.</li>
+  <li data-i18n="data-retention.s6.l2">Disconnect unused social and cloud integrations to reduce stored tokens.</li>
+  <li data-i18n="data-retention.s6.l3">Exercise privacy rights available in your region as described in our Privacy Policy.</li>
+  <li data-i18n="data-retention.s6.l4">Contact us if you need assistance with a deletion or export request.</li>
+</ul>
+
+<h2 data-i18n="data-retention.s7.title">7. International users</h2>
+<p data-i18n="data-retention.s7.p">
+  Retention practices are designed to align with GDPR, UK GDPR, CCPA/CPRA, LGPD, PIPEDA, and other applicable frameworks.
+  Where local law requires a shorter retention period, we apply the shorter period to the extent required.
+</p>
+
+<h2 data-i18n="data-retention.s8.title">8. Changes</h2>
+<p data-i18n="data-retention.s8.p">
+  We may update retention periods as our Service, infrastructure, or legal obligations evolve. Material changes will be
+  reflected in the &ldquo;Last updated&rdquo; date above and, where required, communicated through the App or email.
+</p>
+
+<h2 data-i18n="data-retention.s9.title">9. Contact</h2>
+<p data-i18n-html="data-retention.s9.p">
+  Data retention inquiries:
+  <a href="mailto:support@pinfoldai.com?subject=Data%20retention%20inquiry">support@pinfoldai.com</a>
+</p>
+
+<p data-i18n-html="data-retention.seealso">
+  See also:
+  <a href="/legal/privacy.html">Privacy Policy</a> Â·
+  <a href="/legal/data-deletion.html">Data Deletion</a> Â·
+  <a href="/legal/security.html">Security Disclaimer</a>
+</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="/"><span class="logo-mark">P</span> Pinfold</a>
+        <p class="footer-tagline">
+          <span data-i18n="footer.tagline">Productivity file management for mobile.</span><br />
+          <a href="mailto:support@pinfoldai.com">support@pinfoldai.com</a>
+        </p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.product">Product</h4>
+        <ul>
+          <li><a href="/features.html" data-i18n="footer.features">Features</a></li>
+          <li><a href="/contact.html" data-i18n="footer.contactComplaints">Contact &amp; complaints</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <ul>
+          <li><a href="/legal/index.html" data-i18n="legal.hub">Legal Center</a></li>
+          <li><a href="/legal/privacy.html" data-i18n="footer.privacy">Privacy Policy</a></li>
+          <li><a href="/legal/terms.html" data-i18n="footer.terms">Terms of Service</a></li>
+          <li><a href="/legal/eula.html" data-i18n="legal.eula">EULA</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom" data-i18n="footer.copyright">
+      &copy; 2026 Pinfold. All rights reserved. Package: com.pinfoldai.fileexplorer
+    </div>
+  </footer>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/i18n-legal.js"></script>
+  <script src="/js/i18n-legal-suite.js"></script>
+  <script src="/js/site.js"></script>
+</body>
+</html>
