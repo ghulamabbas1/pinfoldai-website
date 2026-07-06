@@ -18,10 +18,11 @@
         <a href="/contact.html" data-nav="/contact.html">Contact</a>
         <a href="/legal/privacy.html" data-nav="/legal/privacy.html">Privacy</a>
         <a href="/legal/terms.html" data-nav="/legal/terms.html">Terms</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="/features.html">Get the app</a>
       </nav>
-      <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">Menu</button>
     </div>
-    <nav class="nav-mobile container">
+    <nav id="nav-mobile" class="nav-mobile container">
       <a href="/">Home</a>
       <a href="/features.html">Features</a>
       <a href="/contact.html">Contact</a>
@@ -109,19 +110,39 @@
         Manage your plan in the app under Settings → Subscription.
       </p>
     </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div><a class="logo" href="/"><span class="logo-mark">P</span> Pinfold</a></div>
-      <div><h4>Product</h4><ul><li><a href="/features.html">Features</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
-      <div><h4>Legal</h4><ul>
-        <li><a href="/legal/privacy.html">Privacy</a></li>
-        <li><a href="/legal/terms.html">Terms</a></li>
-        <li><a href="/legal/data-deletion.html">Data Deletion</a></li>
-      </ul></div>
+      <div>
+        <a class="logo" href="/"><span class="logo-mark">P</span> Pinfold</a>
+        <p class="footer-tagline">
+          Productivity file management for mobile.<br />
+          <a href="mailto:support@pinfoldai.com">support@pinfoldai.com</a>
+        </p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/features.html">Features</a></li>
+          <li><a href="/contact.html">Contact &amp; complaints</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/legal/privacy.html">Privacy Policy</a></li>
+          <li><a href="/legal/terms.html">Terms of Service</a></li>
+          <li><a href="/legal/acceptable-use.html">Acceptable Use</a></li>
+          <li><a href="/legal/license.html">License &amp; Disclaimer</a></li>
+          <li><a href="/legal/data-deletion.html">Data Deletion</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="container footer-bottom">&copy; 2026 Pinfold</div>
+    <div class="container footer-bottom">
+      &copy; 2026 Pinfold. All rights reserved. Package: com.pinfoldai.fileexplorer
+    </div>
   </footer>
   <script src="/js/site.js"></script>
 </body>

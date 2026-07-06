@@ -3,7 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Pinfold — organize files, free space, and publish to social platforms from one productivity app." />
+  <meta name="description" content="Pinfold — organize files, free space, and publish to social platforms from one productivity app for Android." />
+  <meta name="theme-color" content="#07080d" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pinfoldai.com/" />
+  <meta property="og:title" content="Pinfold — Organize files. Free space. Share your story." />
+  <meta property="og:description" content="Browse and secure files, back up to your own cloud accounts, and publish to social platforms — all from one app." />
+  <meta property="og:site_name" content="Pinfold" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Pinfold — Organize files. Free space. Share your story.</title>
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="canonical" href="https://pinfoldai.com/" />
@@ -21,10 +28,11 @@
         <a href="/contact.html" data-nav="/contact.html">Contact</a>
         <a href="/legal/privacy.html" data-nav="/legal/privacy.html">Privacy</a>
         <a href="/legal/terms.html" data-nav="/legal/terms.html">Terms</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="/features.html">Get the app</a>
       </nav>
-      <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">Menu</button>
     </div>
-    <nav class="nav-mobile container">
+    <nav id="nav-mobile" class="nav-mobile container">
       <a href="/">Home</a>
       <a href="/features.html">Features</a>
       <a href="/contact.html">Contact</a>
@@ -36,61 +44,104 @@
   <main>
     <section class="hero">
       <div class="container hero-grid">
-        <div>
-          <h1>Organize files. Free space. Share your story.</h1>
+        <div class="reveal">
+          <div class="hero-badge">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            Android productivity app
+          </div>
+          <h1>
+            Organize files.<br />
+            <span class="text-gradient">Free space.</span><br />
+            Share your story.
+          </h1>
           <p class="lead">
             Pinfold is a productivity and business file-management app for Android.
-            Browse and secure files on your device, back up to your own Google Drive / OneDrive / Dropbox accounts, and publish to social platforms.
+            Browse and secure files on your device, back up to your own Google Drive, OneDrive, or Dropbox,
+            and publish to social platforms — all from one place.
           </p>
           <div class="btn-row">
             <a class="btn btn-primary" href="/features.html">Explore features</a>
             <a class="btn btn-secondary" href="/contact.html">Contact support</a>
           </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong>48+</strong>
+              <span>Built-in capabilities</span>
+            </div>
+            <div class="stat-item">
+              <strong>8</strong>
+              <span>Feature categories</span>
+            </div>
+            <div class="stat-item">
+              <strong>7+</strong>
+              <span>Social platforms</span>
+            </div>
+          </div>
         </div>
-        <div class="hero-card">
-          <strong>Built for everyday users and creators</strong>
-          <ul>
-            <li>File explorer with search, filters, and vault encryption</li>
-            <li>App lock with PIN and biometric unlock</li>
-            <li>Backup to your Google Drive, OneDrive, or Dropbox (your accounts — not Pinfold storage)</li>
-            <li>Social Publishing Hub — post once, share everywhere</li>
-            <li>Duplicate finder and smart cleanup tools</li>
-          </ul>
+        <div class="hero-visual reveal">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="device-mockup" aria-hidden="true">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+              <div class="mock-bar w55"></div>
+              <div class="mock-card accent">
+                <div class="mock-card-title">Social Hub</div>
+                <div class="mock-pills">
+                  <span class="mock-pill">Instagram</span>
+                  <span class="mock-pill">Facebook</span>
+                  <span class="mock-pill">Threads</span>
+                  <span class="mock-pill">X</span>
+                </div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-card-title">Cloud backup</div>
+                <div class="mock-bar w90"></div>
+                <div class="mock-bar w75"></div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-card-title">Vault · 12 files</div>
+                <div class="mock-bar w55"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section section-alt">
       <div class="container">
-        <h2>Everything you need on your phone</h2>
-        <p class="subtitle">Eight feature categories — local file tools, third-party cloud backup, and social publishing.</p>
-        <div class="feature-grid">
-          <article class="feature-card">
+        <div class="section-header reveal">
+          <span class="section-label">Capabilities</span>
+          <h2>Everything you need on your phone</h2>
+          <p>Local file tools, third-party cloud backup, and social publishing — designed for everyday users and creators.</p>
+        </div>
+        <div class="feature-grid bento">
+          <article class="feature-card reveal">
             <div class="icon">📁</div>
             <h3>File management</h3>
             <p>Browse, search, sort, copy, move, compress, favorites, voice commands, and multi-select operations.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <div class="icon">🔒</div>
             <h3>Security</h3>
             <p>App PIN lock, biometric unlock, folder lock, and encrypted vault for sensitive files.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <div class="icon">📊</div>
             <h3>Storage insights</h3>
             <p>See what uses your space — images, videos, audio, documents, and large files at a glance.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <div class="icon">⚡</div>
             <h3>Productivity</h3>
             <p>Duplicate finder, smart assistant, WhatsApp cleaner, indexed search, and auto-organize rules.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <div class="icon">☁️</div>
             <h3>Cloud backup</h3>
-            <p>Connect your Google Drive, OneDrive, or Dropbox to back up and sync. Pinfold does not provide hosted cloud storage.</p>
+            <p>Connect Google Drive, OneDrive, or Dropbox. Your accounts — not Pinfold storage.</p>
           </article>
-          <article class="feature-card">
+          <article class="feature-card reveal">
             <div class="icon">📣</div>
             <h3>Social publishing</h3>
             <p>Compose once and publish to Instagram, Facebook, Threads, X, TikTok, LinkedIn, and more.</p>
@@ -101,9 +152,57 @@
 
     <section class="section">
       <div class="container">
-        <h2>Product positioning</h2>
-        <p class="subtitle">Pinfold is a productivity and business tool — not an adult-entertainment, gambling, or dating product.</p>
-        <div class="notice">
+        <div class="section-header reveal">
+          <span class="section-label">Social Hub</span>
+          <h2>Post once, share everywhere</h2>
+          <p>Connect your accounts and publish from a single composer — posts, stories, and scheduled content.</p>
+        </div>
+        <div class="platform-strip reveal">
+          <span class="platform-chip">Instagram</span>
+          <span class="platform-chip">Facebook</span>
+          <span class="platform-chip">Threads</span>
+          <span class="platform-chip">X (Twitter)</span>
+          <span class="platform-chip">TikTok</span>
+          <span class="platform-chip">LinkedIn</span>
+          <span class="platform-chip">YouTube</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">How it works</span>
+          <h2>Three steps to a cleaner phone</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card reveal">
+            <div class="step-num">01</div>
+            <h3>Organize locally</h3>
+            <p>Browse, search, and sort files. Lock sensitive folders and move private items into an encrypted vault.</p>
+          </article>
+          <article class="step-card reveal">
+            <div class="step-num">02</div>
+            <h3>Back up to your cloud</h3>
+            <p>Connect Google Drive, OneDrive, or Dropbox — files stay in your own accounts, not on Pinfold servers.</p>
+          </article>
+          <article class="step-card reveal">
+            <div class="step-num">03</div>
+            <h3>Publish your story</h3>
+            <p>Write once in the Social Hub and share to multiple platforms, including stories and scheduled posts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Trust &amp; compliance</span>
+          <h2>Built for productivity and business</h2>
+          <p>Pinfold is a productivity tool — not an adult-entertainment, gambling, or dating product.</p>
+        </div>
+        <div class="notice notice-trust reveal">
           We do not promote pornography, gambling, deceptive advertising, or illegal content.
           Premium subscriptions unlock productivity features only. See our
           <a href="/legal/acceptable-use.html">Acceptable Use Policy</a> and
@@ -111,15 +210,24 @@
         </div>
       </div>
     </section>
+
+    <div class="cta-banner reveal">
+      <h2>Ready to take control of your files?</h2>
+      <p>Explore everything Pinfold offers — from vault encryption to multi-platform publishing.</p>
+      <div class="btn-row" style="justify-content:center;">
+        <a class="btn btn-primary" href="/features.html">View all features</a>
+        <a class="btn btn-secondary" href="/contact.html">Get in touch</a>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
         <a class="logo" href="/"><span class="logo-mark">P</span> Pinfold</a>
-        <p style="color:var(--muted);font-size:0.92rem;margin-top:0.75rem;">
+        <p class="footer-tagline">
           Productivity file management for mobile.<br />
-          support@pinfoldai.com
+          <a href="mailto:support@pinfoldai.com">support@pinfoldai.com</a>
         </p>
       </div>
       <div>
