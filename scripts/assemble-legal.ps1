@@ -133,7 +133,8 @@ foreach ($p in $pages) {
     $html = $html.Replace('$HEAD_ICONS', $headIcons)
     $html = $html.Replace('$LOGO_IMG', $logoImg)
     $outPath = Join-Path $legalDir "$($p.Slug).html"
-    [System.IO.File]::WriteAllText($outPath, $html)
+    $utf8 = New-Object System.Text.UTF8Encoding $false
+    [System.IO.File]::WriteAllText($outPath, $html, $utf8)
     Write-Host "Built $outPath"
 }
 
