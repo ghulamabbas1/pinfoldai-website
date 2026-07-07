@@ -8,3 +8,27 @@ Thumbs.db
 # Deploy artifacts
 *.tar.gz
 pinfold-www.tar.gz
+
+# Python
+__pycache__/
+*.pyc
+
+# Legal i18n build caches and one-off translation tooling
+scripts/_*/
+scripts/_*.json
+scripts/_*.py
+scripts/part1/
+scripts/part2_i18n/
+scripts/find-*.py
+scripts/fix-*.py
+scripts/translate-*.py
+scripts/validate-*.py
+scripts/patch_four*.py
+scripts/rebuild_*.py
+scripts/legal_part2*.py
+scripts/generate-*.py
+scripts/compile_*.py
+scripts/finish_*.py
+scripts/merge-*.mjs
+js/_*.json
+js/legal-page.js
