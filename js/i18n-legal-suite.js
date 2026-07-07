@@ -5449,4 +5449,7 @@
   ['en','ar','fr','zh'].forEach(function (lang) {
     Object.assign(window.PINFOLD_I18N[lang], suite[lang]);
   });
+  if (window.PinfoldSite && window.PinfoldSite.refresh) {
+    window.PinfoldSite.refresh();
+  }
 })();

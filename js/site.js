@@ -3,13 +3,27 @@
   var THEME_KEY = 'pinfold-theme';
   var SUPPORTED_LANGS = ['en', 'ar', 'fr', 'zh'];
 
+  function safeSetItem(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (e) {}
+  }
+
+  function safeGetItem(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (e) {
+      return null;
+    }
+  }
+
   function getLang() {
-    var stored = localStorage.getItem(LANG_KEY) || 'en';
+    var stored = safeGetItem(LANG_KEY) || 'en';
     return SUPPORTED_LANGS.indexOf(stored) >= 0 ? stored : 'en';
   }
 
   function getTheme() {
-    return localStorage.getItem(THEME_KEY) === 'dark' ? 'dark' : 'light';
+    return safeGetItem(THEME_KEY) === 'dark' ? 'dark' : 'light';
   }
 
   function dict(lang) {
@@ -24,7 +38,7 @@
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem(THEME_KEY, theme);
+    safeSetItem(THEME_KEY, theme);
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) {
       meta.setAttribute('content', theme === 'dark' ? '#07080d' : '#f8fafc');
@@ -42,7 +56,7 @@
     var d = dict(lang);
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    localStorage.setItem(LANG_KEY, lang);
+    safeSetItem(LANG_KEY, lang);
 
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var key = el.getAttribute('data-i18n');
@@ -200,4 +214,14 @@
 
   wireHeaderControls();
   applyI18n(getLang());
+
+  window.PinfoldSite = {
+    applyI18n: applyI18n,
+    applyTheme: applyTheme,
+    getLang: getLang,
+    getTheme: getTheme,
+    refresh: function () {
+      applyI18n(getLang());
+    },
+  };
 })();

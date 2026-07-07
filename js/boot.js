@@ -1,13 +1,7 @@
 (function () {
   var theme = localStorage.getItem('pinfold-theme');
-  if (theme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }
+  document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'light');
   var lang = localStorage.getItem('pinfold-lang') || 'en';
   document.documentElement.lang = lang;
-  if (lang === 'ar') {
-    document.documentElement.dir = 'rtl';
-  }
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 })();
